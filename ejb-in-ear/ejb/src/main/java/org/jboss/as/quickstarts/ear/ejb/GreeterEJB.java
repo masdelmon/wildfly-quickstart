@@ -17,8 +17,12 @@
 package org.jboss.as.quickstarts.ear.ejb;
 
 import javax.ejb.Stateful;
-import java.net.*;
-import java.io.*;
+import java.net.URL;
+import java.net.URLConnection;
+import java.net.HttpURLConnection;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.IOException;
 
 /**
  * A simple Hello World EJB. The EJB does not use an interface.
