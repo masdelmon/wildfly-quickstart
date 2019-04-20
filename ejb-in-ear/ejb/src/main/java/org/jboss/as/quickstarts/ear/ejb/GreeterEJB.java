@@ -17,6 +17,8 @@
 package org.jboss.as.quickstarts.ear.ejb;
 
 import javax.ejb.Stateful;
+import java.net.*;
+import java.io.*;
 
 /**
  * A simple Hello World EJB. The EJB does not use an interface.
@@ -34,5 +36,32 @@ public class GreeterEJB {
      */
     public String sayHello(String name) {
         return "Hello " + name;
+    }
+    
+    public String sayJsonPosts(String user_id) {
+        try {
+         URL url = new URL("http://jsonplaceholder.typicode.com/posts/" + user_id);
+         URLConnection urlConnection = url.openConnection();
+         HttpURLConnection connection = null;
+         if(urlConnection instanceof HttpURLConnection) {
+            connection = (HttpURLConnection) urlConnection;
+         }else {
+            
+            return;
+         }
+         
+         BufferedReader in = new BufferedReader(
+            new InputStreamReader(connection.getInputStream()));
+         String urlString = "";
+         String current;
+         
+         while((current = in.readLine()) != null) {
+            urlString += current;
+         }
+         System.out.println(urlString);
+            return urlString;
+      } catch (IOException e) {
+         e.printStackTrace();
+      }
     }
 }
