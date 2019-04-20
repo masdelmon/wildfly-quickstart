@@ -30,7 +30,7 @@ import java.io.Serializable;
  *
  * @author paul.robinson@redhat.com, 2011-12-21
  */
-@Named("greeter")
+@Named("search")
 @SessionScoped
 public class Greeter implements Serializable {
 
@@ -59,8 +59,11 @@ public class Greeter implements Serializable {
     public void setName(String name) {
         message = greeterEJB.sayHello(name);
     }
-    public void setData(String user_id) {
+    public void setDataPosts(String user_id) {
         data = greeterEJB.sayJsonPosts(user_id);
+    }
+    public void setDataComments(String user_id) {
+        data = greeterEJB.sayJsonComments(user_id);
     }
 
     /**
@@ -72,7 +75,10 @@ public class Greeter implements Serializable {
     public String getMessage() {
         return message;
     }
-    public String getData() {
-        return data;
+    public String getDataPosts() {
+        return dataPosts;
+    }
+    public String getDataComments() {
+        return dataComments;
     }
 }
