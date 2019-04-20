@@ -39,6 +39,7 @@ public class GreeterEJB {
     }
     
     public String sayJsonPosts(String user_id) {
+        String urlString = "";
         try {
          URL url = new URL("http://jsonplaceholder.typicode.com/posts/" + user_id);
          URLConnection urlConnection = url.openConnection();
@@ -52,7 +53,7 @@ public class GreeterEJB {
          
          BufferedReader in = new BufferedReader(
             new InputStreamReader(connection.getInputStream()));
-         String urlString = "";
+         urlString = "";
          String current;
          
          while((current = in.readLine()) != null) {
