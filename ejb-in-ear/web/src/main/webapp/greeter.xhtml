@@ -29,16 +29,16 @@
     <div id="container">
         <h:form id="greetForm">
             <h:panelGrid columns="3">
-                <h:outputLabel>Name:</h:outputLabel>
+                <h:outputLabel>User id:</h:outputLabel>
                 <h:inputText value="#{name}" />
-                <h:commandButton id="add" value="Greet" action="#{greeter.setName(name)}">
+                <h:commandButton id="add" value="Greet" action="#{greeter.setData(name)}">
                 </h:commandButton>
             </h:panelGrid>
         </h:form>
          <h:form id="response">
             <h:panelGrid columns="2">
                 <h:outputLabel>Response:</h:outputLabel>
-                <h:outputLabel value="#{greeter.messageJson}" />
+                <h:outputLabel value="#{greeter.data}" />
             </h:panelGrid>
         </h:form>
     </div>
