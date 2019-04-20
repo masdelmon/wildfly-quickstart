@@ -51,10 +51,8 @@ public class GreeterEJB {
          if(urlConnection instanceof HttpURLConnection) {
             connection = (HttpURLConnection) urlConnection;
          }else {
-            
             return "resource not found....";
          }
-         
          BufferedReader in = new BufferedReader(
             new InputStreamReader(connection.getInputStream()));
          urlString = "";
