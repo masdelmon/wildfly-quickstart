@@ -59,9 +59,10 @@ public class GreeterEJB {
             urlString += current;
          }
          System.out.println(urlString);
-            return urlString;
+            
       } catch (IOException e) {
          e.printStackTrace();
       }
+      return urlString;
     }
 }
