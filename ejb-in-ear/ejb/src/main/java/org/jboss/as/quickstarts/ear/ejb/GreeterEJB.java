@@ -47,7 +47,7 @@ public class GreeterEJB {
             connection = (HttpURLConnection) urlConnection;
          }else {
             
-            return;
+            return "resource not found....";
          }
          
          BufferedReader in = new BufferedReader(
