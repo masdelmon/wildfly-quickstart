@@ -32,7 +32,7 @@ import java.io.Serializable;
  */
 @Named("search")
 @SessionScoped
-public class Greeter implements Serializable {
+public class Search implements Serializable {
 
     /** Default value included to remove warning. **/
     private static final long serialVersionUID = 1L;
