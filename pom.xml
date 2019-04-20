@@ -389,89 +389,11 @@
             <modules>
                 <!-- All the modules that require nothing but JBoss Enterprise
                     Application Platform or JBoss EAP -->
-                <module>app-client</module>
-                <module>batch-processing</module>
-                <module>bean-validation</module>
-                <module>bean-validation-custom-constraint</module>
-                <module>bmt</module>
-                <module>cmt</module>
-                <module>contacts-jquerymobile</module>
-                <module>deltaspike-authorization</module>
-                <module>deltaspike-beanbuilder</module>
-                <module>deltaspike-projectstage</module>
-                <module>ee-security</module>
-                <module>ejb-asynchronous</module>
+             
                 <module>ejb-in-ear</module>
-                <module>ejb-in-war</module>
-                <module>ejb-multi-server</module>
-                <module>ejb-security</module>
-                <module>ejb-security-context-propagation</module>
-                <module>ejb-security-jaas</module>
-                <module>ejb-security-programmatic-auth</module>
-                <module>ejb-throws-exception</module>
-                <module>ejb-timer</module>
-                <module>greeter</module>
-                <module>ha-singleton-deployment</module>
-                <module>ha-singleton-service</module>
-                <module>helloworld</module>
-                <module>helloworld-classfiletransformer</module>
-                <module>helloworld-html5</module>
-                <module>helloworld-jms</module>
-                <module>helloworld-mbean</module>
-                <module>helloworld-mdb</module>
-                <module>helloworld-mdb-propertysubstitution</module>
-                <module>helloworld-mutual-ssl</module>
-                <module>helloworld-mutual-ssl-secured</module>
-                <module>helloworld-rf</module>
-                <module>helloworld-rs</module>
-                <module>helloworld-singleton</module>
-                <module>helloworld-ssl</module>
-                <module>helloworld-ws</module>
-                <module>hibernate4</module>
-                <module>hibernate</module>
-                <module>http-custom-mechanism</module>
-                <module>inter-app</module>
-                <module>jaxrs-client</module>
-                <module>jaxrs-jwt</module>
-                <module>jaxws-addressing</module>
-                <module>jaxws-ejb</module>
-                <module>jaxws-pojo</module>
-                <module>jaxws-retail</module>
-                <module>jsonp</module>
-                <module>kitchensink</module>
-                <module>kitchensink-angularjs</module>
-                <module>kitchensink-ear</module>
-                <module>kitchensink-jsp</module>
-                <module>kitchensink-ml</module>
-                <module>kitchensink-utjs-angularjs</module>
-                <module>kitchensink-utjs-mustache</module>
-                <module>logging</module>
-                <module>logging-tools</module>
-                <module>mail</module>
-                <module>managed-executor-service</module>
-                <module>messaging-clustering-singleton</module>
-                <module>numberguess</module>
-                <module>payment-cdi-event</module>
-                <module>resteasy-jaxrs-client</module>
-                <module>security-domain-to-domain</module>
-                <module>servlet-async</module>
-                <module>servlet-filterlistener</module>
-                <module>servlet-security</module>
-                <module>shopping-cart</module>
-                <module>spring-greeter</module>
-                <module>spring-kitchensink-basic</module>
-                <module>spring-kitchensink-springmvctest</module>
-                <module>spring-resteasy</module>
-                <module>tasks-jsf</module>
-                <module>tasks-rs</module>
-                <module>temperature-converter</module>
-                <module>thread-racing</module>
-                <module>websocket-client</module>
-                <module>websocket-endpoint</module>
-                <module>websocket-hello</module>
-                <module>wicket-ear</module>
-                <module>wicket-war</module>
-                <module>xml-jaxp</module>
+             
+                
+              
             </modules>
         </profile>
         <profile>
