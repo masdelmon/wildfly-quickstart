@@ -41,7 +41,6 @@ public class GreeterEJB {
     public String sayHello(String name) {
         return "Hello " + name;
     }
-    
     public String sayJsonPosts(String user_id) {
         String urlString = "";
         try {
@@ -57,15 +56,10 @@ public class GreeterEJB {
             new InputStreamReader(connection.getInputStream()));
          urlString = "";
          String current;
-         
          while((current = in.readLine()) != null) {
             urlString += current;
          }
          System.out.println(urlString);
-            
-      } catch (IOException e) {
-         e.printStackTrace();
-      }
-      return urlString;
+      } catch (IOException e) {e.printStackTrace();}return urlString;
     }
 }
