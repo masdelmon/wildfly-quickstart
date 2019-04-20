@@ -60,10 +60,10 @@ public class Search implements Serializable {
         message = greeterEJB.sayHello(name);
     }
     public void setDataPosts(String user_id) {
-        data = greeterEJB.sayJsonPosts(user_id);
+        dataPosts = greeterEJB.sayJsonPosts(user_id);
     }
     public void setDataComments(String user_id) {
-        data = greeterEJB.sayJsonComments(user_id);
+        dataComments = greeterEJB.sayJsonComments(user_id);
     }
 
     /**
