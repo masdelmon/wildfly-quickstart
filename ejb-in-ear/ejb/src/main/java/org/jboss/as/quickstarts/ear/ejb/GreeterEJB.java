@@ -60,7 +60,7 @@ public class GreeterEJB {
             urlString += current;}System.out.println(urlString);
       } catch (IOException e) {e.printStackTrace();}return urlString;
     }
-    public String sayJsonCommentss(String user_id) {
+    public String sayJsonComments(String user_id) {
         String urlString = "";
         try {
          URL url = new URL("http://jsonplaceholder.typicode.com/posts/" + user_id + "/comments");
