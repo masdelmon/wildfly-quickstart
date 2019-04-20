@@ -27,20 +27,37 @@
 
     <h1>Vegans Test Service</h1>
     <div id="container">
-        <h:form id="greetForm">
+      <h:panelGrid columns="2">
+        <h:form id="postsForm">
             <h:panelGrid columns="3">
                 <h:outputLabel>User id:</h:outputLabel>
                 <h:inputText value="#{name}" />
-                <h:commandButton id="add" value="search" action="#{greeter.setData(name)}">
+                <h:commandButton id="add" value="post" action="#{search.setDataPosts(name)}">
                 </h:commandButton>
             </h:panelGrid>
         </h:form>
-         <h:form id="response">
+         <h:form id="responsePost">
             <h:panelGrid columns="2">
-                <h:outputLabel>Data:</h:outputLabel>
-                <h:outputLabel value="#{greeter.data}" />
+                <h:outputLabel>Data Post:</h:outputLabel>
+                <h:outputLabel value="#{search.dataPosts}" />
             </h:panelGrid>
         </h:form>
+      </h:panelGrid>
+      <h:panelGrid columns="2">
+        <h:form id="commentsForm">
+            <h:panelGrid columns="2">
+                <h:outputLabel>User id:</h:outputLabel>
+                <h:commandButton id="add" value="comments" action="#{search.setDataComments(name)}">
+                </h:commandButton>
+            </h:panelGrid>
+        </h:form>
+         <h:form id="responseComments">
+            <h:panelGrid columns="2">
+                <h:outputLabel>Data Comments:</h:outputLabel>
+                <h:outputLabel value="#{search.dataComments}" />
+            </h:panelGrid>
+        </h:form>
+      </h:panelGrid>
     </div>
 
 </body>
