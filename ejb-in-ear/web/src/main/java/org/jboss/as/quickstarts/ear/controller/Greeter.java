@@ -47,7 +47,8 @@ public class Greeter implements Serializable {
      * Stores the response from the call to greeterEJB.sayHello(...)
      */
     private String message;
-    private String data;
+    private String dataPosts;
+    private String dataComments;
 
     /**
      * Invoke greeterEJB.sayHello(...) and store the message
