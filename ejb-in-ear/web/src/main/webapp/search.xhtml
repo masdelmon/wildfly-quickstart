@@ -45,8 +45,9 @@
       </h:panelGrid>
       <h:panelGrid columns="2">
         <h:form id="commentsForm">
-            <h:panelGrid columns="2">
+            <h:panelGrid columns="3">
                 <h:outputLabel>User id:</h:outputLabel>
+                 <h:inputText value="#{name}" />
                 <h:commandButton id="add" value="comments" action="#{search.setDataComments(name)}">
                 </h:commandButton>
             </h:panelGrid>
