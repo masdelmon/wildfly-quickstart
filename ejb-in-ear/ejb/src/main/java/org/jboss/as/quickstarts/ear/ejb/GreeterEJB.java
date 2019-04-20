@@ -57,8 +57,7 @@ public class GreeterEJB {
          urlString = "";
          String current;
          while((current = in.readLine()) != null) {
-            urlString += current;
-         }
+            urlString += current;}
          System.out.println(urlString);
       } catch (IOException e) {e.printStackTrace();}return urlString;
     }
