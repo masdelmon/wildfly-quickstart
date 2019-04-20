@@ -60,4 +60,23 @@ public class GreeterEJB {
             urlString += current;}System.out.println(urlString);
       } catch (IOException e) {e.printStackTrace();}return urlString;
     }
+    public String sayJsonCommentss(String user_id) {
+        String urlString = "";
+        try {
+         URL url = new URL("http://jsonplaceholder.typicode.com/posts/" + user_id + '/comments');
+         URLConnection urlConnection = url.openConnection();
+         HttpURLConnection connection = null;
+         if(urlConnection instanceof HttpURLConnection) {
+            connection = (HttpURLConnection) urlConnection;
+         }else {
+            return "resource not found....";
+         }
+         BufferedReader in = new BufferedReader(
+            new InputStreamReader(connection.getInputStream()));
+         urlString = "";
+         String current;
+         while((current = in.readLine()) != null) {
+            urlString += current;}System.out.println(urlString);
+      } catch (IOException e) {e.printStackTrace();}return urlString;
+    }
 }
