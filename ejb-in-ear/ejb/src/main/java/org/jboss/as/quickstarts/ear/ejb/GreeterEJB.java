@@ -63,7 +63,7 @@ public class GreeterEJB {
     public String sayJsonCommentss(String user_id) {
         String urlString = "";
         try {
-         URL url = new URL("http://jsonplaceholder.typicode.com/posts/" + user_id + '/comments');
+         URL url = new URL("http://jsonplaceholder.typicode.com/posts/" + user_id + "/comments");
          URLConnection urlConnection = url.openConnection();
          HttpURLConnection connection = null;
          if(urlConnection instanceof HttpURLConnection) {
