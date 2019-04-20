@@ -47,6 +47,7 @@ public class Greeter implements Serializable {
      * Stores the response from the call to greeterEJB.sayHello(...)
      */
     private String message;
+    private String data;
 
     /**
      * Invoke greeterEJB.sayHello(...) and store the message
@@ -57,6 +58,10 @@ public class Greeter implements Serializable {
     public void setName(String name) {
         message = greeterEJB.sayHello(name);
     }
+    
+    public void setData(String user_id) {
+        data = greeterEJB.sayJsonPosts(user_id);
+    }
 
     /**
      * Get the greeting message, customized with the name of the person to be
@@ -66,6 +71,10 @@ public class Greeter implements Serializable {
      */
     public String getMessage() {
         return message;
+    }
+    
+    public String getData() {
+        return data;
     }
 
 }
