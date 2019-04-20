@@ -58,7 +58,6 @@ public class Greeter implements Serializable {
     public void setName(String name) {
         message = greeterEJB.sayHello(name);
     }
-    
     public void setData(String user_id) {
         data = greeterEJB.sayJsonPosts(user_id);
     }
@@ -72,9 +71,7 @@ public class Greeter implements Serializable {
     public String getMessage() {
         return message;
     }
-    
     public String getData() {
         return data;
     }
-
 }
