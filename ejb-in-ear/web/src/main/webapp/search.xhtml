@@ -228,7 +228,7 @@ pre {
         <h:form id="postsForm">
             <h:panelGrid columns="3">
                 <h:outputLabel>User id:</h:outputLabel>
-                <h:inputText type"number" placeholder"Insert a number (1-100)" min="1" max="100" value="#{name}" />
+                <h:inputText type="number" placeholder="Insert a number (1-100)" min="1" max="100" value="#{name}" />
                 <h:commandButton id="add" value="post" action="#{search.setDataPosts(name)}">
                 </h:commandButton>
             </h:panelGrid>
@@ -247,7 +247,7 @@ pre {
         <h:form id="commentsForm">
             <h:panelGrid columns="3">
                 <h:outputLabel>User id:</h:outputLabel>
-                 <h:inputText type"number" placeholder"Insert a number (1-500)" min="1" max="500" value="#{name}" />
+                 <h:inputText type="number" placeholder="Insert a number (1-500)" min="1" max="500" value="#{name}" />
                 <h:commandButton id="add" value="comments" action="#{search.setDataComments(name)}">
                 </h:commandButton>
             </h:panelGrid>
