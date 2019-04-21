@@ -21,11 +21,11 @@
       xmlns:f="http://xmlns.jcp.org/jsf/core"
       xmlns:p="http://xmlns.jcp.org/jsf/passthrough">
 
-<head>
+<h:head>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 <title>Welcome to Vegans</title>
 <h:outputStylesheet library="css" name="loader.css"/>
-<h:outputScript library="js" name="jsf.js" />
+<h:outputScript library="javax.faces" name="jsf.js" target="head"/>
 <style>
 /*!
  * Bootstrap v3.0.0
@@ -234,7 +234,7 @@ pre {
   font-family: Menlo,Monaco,"Liberation Mono",Consolas,monospace !important;
 }
 </style>
-</head>
+</h:head>
 
 <body>
   <section class='container'>
