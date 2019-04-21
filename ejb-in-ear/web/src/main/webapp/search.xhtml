@@ -36,33 +36,7 @@
  *
  * Designed and built with all the love in the world @twitter by @mdo and @fat.
  */
-.modal {
-    display:    none;
-    position:   fixed;
-    z-index:    1000;
-    top:        0;
-    left:       0;
-    height:     100%;
-    width:      100%;
-    background: rgba( 255, 255, 255, .8 );
-    background-image: url('#{facesContext.externalContext.requestContextPath}/resources/images/ajax-loader.gif');
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-}
 
-/* When the body has the loading class, we turn
- * the scrollbar off with overflow:hidden 
-*/
-body.loading {
-    overflow: hidden;   
-}
-
-/* Anytime the body has the loading class, our
- * modal element will be visible 
-*/
-body.loading .modal {
-    display: block;
-}
     
  .logo2 {
     background-size: cover;
@@ -276,7 +250,7 @@ pre {
                 <h:outputLabel>User id:</h:outputLabel>
                 <h:inputText id="inputPosts" type="number" p:placeholder="Insert a number (1-100)" min="1" max="100" value="#{name}" />
                 <h:commandButton id="add" value="post" action="#{search.setDataPosts(name)}">
-                      <f:ajax execute = "inputPosts" render = "outputDataPosts" />
+                      <f:ajax execute="@form" render="outputDataPosts" />
                 </h:commandButton>
             </h:panelGrid>
         </h:form>
