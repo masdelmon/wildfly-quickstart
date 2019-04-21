@@ -24,6 +24,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 <title>Welcome to Vegans</title>
+<h:outputStylesheet library="css" name="loader.css"/>
+<h:outputScript library="javax.faces" name="jsf.js" target="head"/>
 <style>
 /*!
  * Bootstrap v3.0.0
@@ -285,5 +287,30 @@ pre {
       <div class="logo2"><a href="https://wildfly.org/"></a></div>
    </footer>
  </section>
+     <div class="modal"><!-- Place at bottom of page before JS --></div>
+        
+        <script type="text/javascript">
+            function handleAjax(data) {
+                var status = data.status;
+
+                switch (status) {
+                    case "begin":
+                        // This is the start of the AJAX request.
+                        document.getElementsByTagName('body')[0].className = 'loading';
+                        break;
+
+                    case "complete":
+                        // This is invoked right after AJAX response is returned.
+                        break;
+
+                    case "success":
+                        // This is invoked right after successful processing of AJAX response and update of HTML DOM.
+                        document.getElementsByTagName('body')[0].className = '';
+                        break;
+                }
+            }
+            // Setup the statusUpdate function to hear all events on the page
+            jsf.ajax.addOnEvent(handleAjax);
+        </script> 
 </body>
 </html>
