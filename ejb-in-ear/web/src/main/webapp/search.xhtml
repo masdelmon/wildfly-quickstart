@@ -265,7 +265,7 @@ pre {
         <h:form id="commentsForm">
             <h:panelGrid columns="3">
                 <h:outputLabel>User id:</h:outputLabel>
-                 <h:inputText id="inputComments" type="number" p.placeholder="Insert a number (1-500)" min="1" max="500" value="#{name}" />
+                 <h:inputText id="inputComments" type="number" p:placeholder="Insert a number (1-500)" min="1" max="500" value="#{name}" />
                 <h:commandButton id="add" value="comments" action="#{search.setDataComments(name)}">
                      <f:ajax execute = "inputComments" render = "outputDataComments" />
                 </h:commandButton>
