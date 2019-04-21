@@ -242,15 +242,16 @@ pre {
         <h:form id="postsForm">
             <h:panelGrid columns="3">
                 <h:outputLabel>User id:</h:outputLabel>
-                <h:inputText type="number" placeholder="Insert a number (1-100)" min="1" max="100" value="#{name}" />
+                <h:inputText id="inputPosts" type="number" placeholder="Insert a number (1-100)" min="1" max="100" value="#{name}" />
                 <h:commandButton id="add" value="post" action="#{search.setDataPosts(name)}">
+                      <f:ajax execute = "inputPosts" render = "outputDataPosts" />
                 </h:commandButton>
             </h:panelGrid>
         </h:form>
          <h:form id="responsePost">
             <h:panelGrid columns="2">
                 <h:outputLabel>Data Post:</h:outputLabel>
-                <h:outputLabel value="#{search.dataPosts}" />
+                <h:outputLabel id="outputDataPosts" value="#{search.dataPosts}" />
             </h:panelGrid>
         </h:form>
       </h:panelGrid>
@@ -261,15 +262,16 @@ pre {
         <h:form id="commentsForm">
             <h:panelGrid columns="3">
                 <h:outputLabel>User id:</h:outputLabel>
-                 <h:inputText type="number" placeholder="Insert a number (1-500)" min="1" max="500" value="#{name}" />
+                 <h:inputText id="inputComments" type="number" placeholder="Insert a number (1-500)" min="1" max="500" value="#{name}" />
                 <h:commandButton id="add" value="comments" action="#{search.setDataComments(name)}">
+                     <f:ajax execute = "inputComments" render = "outputDataComments" />
                 </h:commandButton>
             </h:panelGrid>
         </h:form>
          <h:form id="responseComments">
             <h:panelGrid columns="2">
                 <h:outputLabel>Data Comments:</h:outputLabel>
-                <h:outputLabel value="#{search.dataComments}" />
+                <h:outputLabel id="outputDataComments" value="#{search.dataComments}" />
             </h:panelGrid>
         </h:form>
       </h:panelGrid>
