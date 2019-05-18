@@ -253,8 +253,7 @@ pre {
                       <f:ajax execute="@form" render="outputDataPosts" />
                 </h:commandButton>
             </h:panelGrid>
-        </h:form>
-         <h:form id="responsePost">
+
             <h:panelGrid columns="2">
                 <h:outputLabel>Data Post:</h:outputLabel>
                 <h:outputLabel id="outputDataPosts" value="#{search.dataPosts}" />
@@ -273,8 +272,7 @@ pre {
                      <f:ajax execute = "inputComments" render = "outputDataComments" />
                 </h:commandButton>
             </h:panelGrid>
-        </h:form>
-         <h:form id="responseComments">
+
             <h:panelGrid columns="2">
                 <h:outputLabel>Data Comments:</h:outputLabel>
                 <h:outputLabel id="outputDataComments" value="#{search.dataComments}" />
