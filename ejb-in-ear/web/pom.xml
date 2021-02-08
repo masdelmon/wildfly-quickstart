@@ -26,7 +26,7 @@
     <parent>
         <groupId>org.wildfly.quickstarts</groupId>
         <artifactId>ejb-in-ear</artifactId>
-        <version>17.0.1.Final</version>
+        <version>22.0.0.Final</version>
     </parent>
     <artifactId>ejb-in-ear-web</artifactId>
     <packaging>war</packaging>
@@ -45,8 +45,8 @@
 
         <!-- Import the CDI API, we use provided scope as the API is included in JBoss EAP -->
         <dependency>
-            <groupId>javax.enterprise</groupId>
-            <artifactId>cdi-api</artifactId>
+            <groupId>jakarta.enterprise</groupId>
+            <artifactId>jakarta.enterprise.cdi-api</artifactId>
             <scope>provided</scope>
         </dependency>
 
